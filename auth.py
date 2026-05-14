@@ -1,43 +1,33 @@
-
 import streamlit as st
+import os
 
-st.title("Psychological Framework")
+def check_password():
 
-st.markdown('''
-## Attachment Theory
+    def password_entered():
+        if st.session_state["password"] == os.getenv("APP_PASSWORD"):
+            st.session_state["password_correct"] = True
+            del st.session_state["password"]
+        else:
+            st.session_state["password_correct"] = False
 
-Winners consistently exhibit secure attachment behaviors:
-- calm communication
-- emotional openness
-- low jealousy
-- high trust
+    if "password_correct" not in st.session_state:
+        st.text_input(
+            "Password",
+            type="password",
+            on_change=password_entered,
+            key="password",
+        )
+        st.stop()
 
----
+    elif not st.session_state["password_correct"]:
+        st.text_input(
+            "Password",
+            type="password",
+            on_change=password_entered,
+            key="password",
+        )
+        st.error("Incorrect Password")
+        st.stop()
 
-## Social Perception
+    return True
 
-Audiences consistently reward:
-- warmth over dominance
-- consistency over unpredictability
-- prosocial behavior over aggression
-
----
-
-## Social Penetration Theory
-
-Gradual reciprocal self-disclosure strongly predicts:
-- intimacy
-- audience attachment
-- likability
-- trustworthiness
-
----
-
-## Broaden-and-Build Theory
-
-Positive emotions statistically broaden:
-- social bonds
-- alliance formation
-- network centrality
-- public approval
-''')
