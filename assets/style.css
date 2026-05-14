@@ -12,7 +12,7 @@ section[data-testid="stSidebar"] {
 }
 
 section[data-testid="stSidebar"] * {
-    color:white !important;
+    color: white !important;
 }
 
 .hero {
