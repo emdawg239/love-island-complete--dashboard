@@ -2,6 +2,10 @@ import streamlit as st
 import plotly.graph_objects as go
 import numpy as np
 
+from auth import check_password
+
+check_password()
+
 # ------------------------------------------------
 # LOAD STYLES
 # ------------------------------------------------
