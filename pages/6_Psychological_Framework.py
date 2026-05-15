@@ -1,6 +1,10 @@
 
 import streamlit as st
 
+from auth import check_password
+
+check_password()
+
 # ------------------------------------------------
 # LOAD STYLES
 # ------------------------------------------------
