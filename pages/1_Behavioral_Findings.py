@@ -3,6 +3,36 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
+
+# ------------------------------------------------
+# LOVE ISLAND DESIGN SYSTEM
+# ------------------------------------------------
+
+LOVE_ISLAND_COLORS = {
+    "hot_pink": "#ff4f98",
+    "soft_pink": "#ff8ec2",
+    "baby_pink": "#ffd6e8",
+    "sunset": "#ff9671",
+    "gold": "#ffc75f",
+    "ocean": "#4da8ff",
+    "mint": "#7be0c3",
+    "lavender": "#b39cff",
+    "cream": "#fff8f3",
+    "dark": "#2f1b2e"
+}
+
+WINNER_COLOR_SCALE = [
+    LOVE_ISLAND_COLORS["baby_pink"],
+    LOVE_ISLAND_COLORS["soft_pink"],
+    LOVE_ISLAND_COLORS["hot_pink"]
+]
+
+DRAMA_SCALE = [
+    "#ffe5ec",
+    "#ff7096",
+    "#d90429"
+]
+
 # ---------- PAGE CONFIG ----------
 
 st.set_page_config(layout="wide")
