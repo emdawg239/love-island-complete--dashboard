@@ -3,6 +3,10 @@ import plotly.graph_objects as go
 import pandas as pd
 import numpy as np
 
+from auth import check_password
+
+check_password()
+
 # ------------------------------------------------
 # LOAD STYLES
 # ------------------------------------------------
