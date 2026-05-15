@@ -3,6 +3,10 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
+from auth import check_password
+
+check_password()
+
 
 # ------------------------------------------------
 # LOVE ISLAND DESIGN SYSTEM
